@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama&display=swap');
+
+body{
+    font-family: 'Georama', sans-serif;
+    font-size: 20px;
+    
+}
+
+ul{
+    list-style-type: decimal;
+}
+
+li{
+    background-color:#D5D8DC;
+    padding: 0.3rem;
+    margin: 0.4rem;
+
+}
+.lista{
+    width: 20rem;
+}
+.form-class{
+    margin-left: 2rem;
+
+}
+button{
+    background-color: #D5D8DC;
+    margin: 0;
+    padding: 0.5rem 1.8rem;
+    border: none;
+    
+}
+input{
+    width: 10.8rem;
+    height: 1.5rem;
+}
