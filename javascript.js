@@ -1,24 +1,42 @@
 const input = document.getElementById('from-id')
+const peliculas = document.getElementById('peliculas') 
+let list = []
 
-function validateName(tittle) {
-    if(tittle.value==''){
-        console.log('completa el campo')
-        return false
-    
+function validate(text) {
+    if(text==''){
+        return false  
     }else{ 
         return true
     }
+}
+
+function addList(name) {
+    list.push(name)   
+}
+
+function addToDocument(list) {
+    peliculas.innerHTML = "";
+    
+    list.forEach((element) => {
+        let node = document.createElement("LI");// Create a <li> node
+        //if primer elemento en rojo
+        let textnode = document.createTextNode(element);         // Create a text node
+        node.appendChild(textnode);            // Append the text to <li>
+        peliculas.appendChild(node)
+    });
 }
 
 input.addEventListener('submit', (e) => {
 	e.preventDefault();
     const tittle = document.getElementById('tittle')
     console.log(tittle.value);
-    const validate = validateName(tittle)
-    if(validate == false){
+    const validar = validate(tittle.value)
+    if(validar == false){
         return
     }else{
-        console.log('aca deberia continuar')
+        addList(tittle.value)
+        console.log(list)
+        addToDocument(list)
     }
             
     
