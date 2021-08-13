@@ -12,14 +12,20 @@
         <h1>Titulo de la pelicula</h1>
         <form id="from-id">
             <input placeholder="Ingrese Titulo" type="text" id="tittle">
-            <button class="but-class" type="submit">Buscar</button>
+            <button class="but-class" type="submit" id="buscar">Buscar</button>
         </form>
+    </section>
+    <section id="invisible" class="invisible">
+        <p>Error! no ingrese algo vacio</p>
+    </section>
+    <section id="norepetidos" class="invisible">
+        <p>Error! por favor no ingrese nombres repetidos</p>
     </section>
     <section class="lista">
         <ul id="peliculas">
-            
         </ul>
     </section>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="javascript.js"></script>
 
 </body>
